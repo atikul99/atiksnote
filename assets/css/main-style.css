@@ -1,5 +1,6 @@
 :root{
 	--title-color: #262626;
+	--border-color: #E2E2E2;
 }
 *{
 	margin: 0;
@@ -72,8 +73,11 @@ a:active {
 .site-header .menu-wrapper .site-title a{
 	color: var(--title-color);
 }
-.site-header .menu-wrapper ul li{
-	margin-right: 15px;
+.site-header .menu-wrapper ul li {
+	margin-right: 20px;
+}
+.site-header .menu-wrapper ul li:last-child {
+	margin-right: 0;
 }
 .site-header .menu-wrapper ul li a{
 	color: #171717;
@@ -210,8 +214,8 @@ code{
 /* Sidebar */
 
 .widget-area .widget{
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 6px;
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
 	padding: 30px 25px;
 }
 .widget-area .widget ul{
@@ -252,4 +256,33 @@ code{
 }
 .site-footer .site-info{
 	text-align: center;
+}
+
+/*==============
+ Category Page
+================*/
+
+.all-category-page {
+	padding: 90px 0;
+}
+.all-category-page .category-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+	gap: 30px;
+	margin-top: 40px;
+}
+.all-category-page .category-card {
+	padding: 30px;
+	border: 1px solid var(--border-color);
+	border-radius: 10px;
+	transition: 0.3s;
+}
+.all-category-page .category-card:hover {
+	transform: translateY(-5px);
+}
+.all-category-page .category-card h3 {
+	margin-bottom: 15px;
+}
+.all-category-page .category-card a {
+	text-decoration: none;
 }
